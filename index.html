@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adish Sharma portfolio: Unity game development, AI/ML simulations, software engineering, and interactive WebGL projects." />
+  <title>Adish Sharma | Game Developer & Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Adish Sharma home">
+      <span class="brand-mark"><img src="myphoto.jpg" alt="" /></span>
+      <span>Adish Sharma</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#games">Games</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#ai">AI/ML</a>
+      <a href="#software">Software</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light theme">
+        <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
+        <span class="theme-toggle-label">Light</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Unity Game Developer | AI Systems | Software Engineering</p>
+        <h1>Building playable systems, real-time simulations, and intelligent interactive products.</h1>
+        <p class="hero-text">
+          I am a Computer Science undergraduate focused on game development first: Unity gameplay, multiplayer systems,
+          physics-driven mechanics, AI agents, AR/VR, and polished user-facing software.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#games">View Game Work</a>
+          <a class="secondary-btn" href="assets/resumes/GameDevAdishSharma-Resume.pdf" target="_blank" rel="noopener">Game Dev Resume</a>
+          <a class="secondary-btn" href="assets/resumes/AI_AdishSharma-Resume.pdf" target="_blank" rel="noopener">AI Resume</a>
+          <a class="secondary-btn" href="assets/resumes/SW_AdishSharma-Resume.pdf" target="_blank" rel="noopener">SW Resume</a>
+        </div>
+        <div class="hero-stats" aria-label="Portfolio highlights">
+          <span><strong>8+</strong> playable prototypes</span>
+          <span><strong>3</strong> focus areas</span>
+          <span><strong>Unity</strong> advanced</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Portrait and role summary">
+        <img src="myphoto.jpg" alt="Adish Sharma" />
+        <div class="hero-card">
+          <span>Currently strongest in</span>
+          <strong>Gameplay systems, multiplayer logic, and simulation workflows</strong>
+        </div>
+      </div>
+    </section>
+
+    <aside class="desktop-character-hint collapsed" id="fightPanel" aria-label="Interactive character controls">
+      <button class="fight-panel-toggle" id="fightPanelToggle" type="button" aria-expanded="false">Letter fight</button>
+      <div class="fight-panel-body">
+        <strong>Desktop mini game:</strong> arrows move. A left hand, S right hand, Z left leg, X right leg. Hit the red duplicate letters. Disabled on mobile.
+        <div class="fight-buttons">
+          <button id="stickmanPlay" type="button">Play letter fight</button>
+          <button class="fight-close" id="stickmanLeave" type="button" aria-label="Close fight" hidden>×</button>
+        </div>
+        <span id="stickmanStatus">Hits: 0/5 | Timer: 0.0s</span>
+      </div>
+    </aside>
+
+    <div class="stickman-stage" aria-hidden="true">
+      <div class="letter-targets"></div>
+      <div class="stickman" id="stickman">
+        <span class="head"></span>
+        <span class="body"></span>
+        <span class="arm left"></span>
+        <span class="arm right"></span>
+        <span class="leg left"></span>
+        <span class="leg right"></span>
+      </div>
+    </div>
+
+    <section class="profile-tabs-section" id="profiles">
+      <div class="section-heading">
+        <p class="eyebrow">Profiles</p>
+        <h2>Choose a version of my portfolio</h2>
+        <p>Three focused views from the resumes: game development first, AI/ML systems, and software engineering.</p>
+      </div>
+      <div class="tab-buttons" role="tablist" aria-label="Portfolio profiles">
+        <button class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="game-profile" data-tab="game-profile">Game Development</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="ai-profile" data-tab="ai-profile">AI/ML</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="sw-profile" data-tab="sw-profile">Software</button>
+      </div>
+      <div class="tab-panels">
+        <article class="tab-panel active" id="game-profile" role="tabpanel">
+          <div>
+            <span class="profile-label">Main Profile</span>
+            <h3>Unity Game Developer</h3>
+            <p>Gameplay mechanics, multiplayer synchronization, physics, UI/UX flow, AR/VR exposure, playtesting, and WebGL builds.</p>
+          </div>
+          <ul>
+            <li>Photon Fusion multiplayer and room logic</li>
+            <li>Vehicle, flight, FPS, shooting, placement, and chess prototypes</li>
+            <li>Unity DevOps, debugging, iteration, and performance cleanup</li>
+          </ul>
+          <a class="profile-resume" href="assets/resumes/GameDevAdishSharma-Resume.pdf" target="_blank" rel="noopener">Open Game Dev Resume</a>
+        </article>
+        <article class="tab-panel" id="ai-profile" role="tabpanel" hidden>
+          <div>
+            <span class="profile-label">AI Systems Profile</span>
+            <h3>AI/ML and Simulation Developer</h3>
+            <p>Reinforcement learning, Unity ML-Agents, autonomous navigation, NPC decision systems, and scenario-based learning logic.</p>
+          </div>
+          <ul>
+            <li>Reward tuning and iterative training loops</li>
+            <li>State machines for patrol, detection, and combat behavior</li>
+            <li>Python, PyTorch familiarity, and Unity-based intelligent agents</li>
+          </ul>
+          <a class="profile-resume" href="assets/resumes/AI_AdishSharma-Resume.pdf" target="_blank" rel="noopener">Open AI Resume</a>
+        </article>
+        <article class="tab-panel" id="sw-profile" role="tabpanel" hidden>
+          <div>
+            <span class="profile-label">Software Profile</span>
+            <h3>Software Engineer</h3>
+            <p>Full-stack and real-time application work using C#, C++, HTML, CSS, JavaScript, React, Spring Boot, and AWS deployment.</p>
+          </div>
+          <ul>
+            <li>SurvivalX web platform with Unity WebGL simulations</li>
+            <li>Clean OOP modules, debugging, unit testing, and documentation</li>
+            <li>Freelance delivery under short timelines and changing requirements</li>
+          </ul>
+          <a class="profile-resume" href="assets/resumes/SW_AdishSharma-Resume.pdf" target="_blank" rel="noopener">Open Software Resume</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block tech-section" id="tech">
+      <div class="section-heading">
+        <p class="eyebrow">Technology Stack</p>
+        <h2>Tools I work with</h2>
+        <p>Grouped around game development, AI/ML, software engineering, cloud, and production workflows.</p>
+      </div>
+      <div class="logo-grid">
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="" /><span>Unity</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" alt="" /><span>Unreal</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" /><span>C#</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="" /><span>C++</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" /><span>Python</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="" /><span>Blender</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="" /><span>Firebase</span></article>
+        <article class="logo-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" /><span>AWS</span></article>
+        <article class="logo-tile"><span class="text-logo">PF</span><span>Photon Fusion</span></article>
+        <article class="logo-tile"><span class="text-logo">ML</span><span>Unity ML-Agents</span></article>
+        <article class="logo-tile"><span class="text-logo">AG</span><span>Agora SDK</span></article>
+      </div>
+    </section>
+
+    <section class="section-block" id="games">
+      <div class="section-heading">
+        <p class="eyebrow">Main Track</p>
+        <h2>Game Development</h2>
+        <p>Unity-first projects covering mechanics, physics, multiplayer, UI flow, testing, and WebGL delivery.</p>
+      </div>
+
+      <div class="featured-grid">
+        <article class="project-card project-large">
+          <div class="project-topline"><span>Open World Prototype</span><span>Unity</span></div>
+          <h3>City of Cars</h3>
+          <p>A free-roam city experience with driving, flying, mission flow, snapshot moments, and backup helicopter support.</p>
+          <div class="tag-row"><span>Vehicle Physics</span><span>Mission Flow</span><span>Cinematics</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1dEXahtN636KmhFy1E1GoSN4K5md5PxUM/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+        </article>
+
+        <article class="project-card project-large">
+          <div class="project-topline"><span>Playable WebGL</span><span>Physics</span></div>
+          <h3>Fly With The Wind</h3>
+          <p>A paper-plane flight game focused on lift, drag, wind forces, and smooth player control, with rehab-oriented input potential.</p>
+          <div class="tag-row"><span>Flight Controls</span><span>Forces</span><span>WebGL</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1i44feGmPHRdEED78r9CgRmwdJI06U5ss/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+          <div class="webgl-container"><iframe title="Fly With The Wind WebGL build"></iframe></div>
+        </article>
+
+        <article class="project-card project-large">
+          <div class="project-topline"><span>Playable WebGL</span><span>3D</span></div>
+          <h3>Basketball Shooting 3D</h3>
+          <p>A score-chasing 3D shooting prototype built around precision, camera feel, high-score loops, and repeatable skill testing.</p>
+          <div class="tag-row"><span>Input Feel</span><span>Scoring</span><span>Unity WebGL</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/13YkQwROQ-A5_y7zaly4ymFLbcAtdtTGQ/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+          <div class="webgl-container"><iframe title="Basketball Shooting 3D WebGL build"></iframe></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline"><span>First Person</span><span>Movement</span></div>
+          <h3>Parkour FPS</h3>
+          <p>Fast first-person traversal where players dodge hazards and route toward an end cube.</p>
+          <div class="tag-row"><span>FPS</span><span>Level Flow</span><span>Hazards</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1dEXahtN636KmhFy1E1GoSN4K5md5PxUM/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline"><span>System Design</span><span>Tools</span></div>
+          <h3>Object Placement System</h3>
+          <p>Third-person placement mechanic with snapping, material feedback, and preview validation.</p>
+          <div class="tag-row"><span>Snapping</span><span>Validation</span><span>UX</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1aErrFNFwxRMOPRiGJoLVwib9IFngUQcr/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline"><span>Vehicle Controller</span><span>Physics</span></div>
+          <h3>3D Car Controller</h3>
+          <p>Vehicle controller with UI menus, prop interaction, tuned driving physics, and user-facing gameplay controls.</p>
+          <div class="tag-row"><span>Driving</span><span>UI</span><span>Interaction</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1jsF_ZZd87acmZN4vPqnNnhufplR5JCjQ/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline"><span>Combat System</span><span>FPS</span></div>
+          <h3>Basic Shooting Mechanism</h3>
+          <p>FPS shooting system with bullet firing, object pooling, hit handling, and cleanup logic.</p>
+          <div class="tag-row"><span>Shooting</span><span>Pooling</span><span>Cleanup</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1wcBwyJm771eWGHKuoENcauDE3EzfrZzS/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline"><span>Gameplay</span><span>Logic</span></div>
+          <h3>3D Chess</h3>
+          <p>A playable 3D chess prototype with turn-based logic and camera control.</p>
+          <div class="tag-row"><span>Rules</span><span>Camera</span><span>Turns</span></div>
+          <div class="card-actions">
+            <a href="https://drive.google.com/file/d/1JDstfXL6_vCqaBiaywZktqr8fyaajkBI/view" target="_blank" rel="noopener">Open Video</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="split-section" id="ai">
+      <div class="section-heading">
+        <p class="eyebrow">AI/ML Track</p>
+        <h2>Intelligent simulation work</h2>
+        <p>Applying reinforcement learning, state machines, and decision logic inside real-time Unity environments.</p>
+      </div>
+      <div class="info-grid">
+        <article class="info-panel">
+          <h3>Autonomous Agent Navigation</h3>
+          <p>Trained an agent to navigate toward a target using Unity ML-Agents, reward tuning, and iterative training.</p>
+          <div class="tag-row"><span>Reinforcement Learning</span><span>Python</span><span>Reward Design</span></div>
+        </article>
+        <article class="info-panel">
+          <h3>Enemy AI Systems</h3>
+          <p>Built NPC behavior using state machines, decision logic, patrolling, detection, and combat interactions.</p>
+          <div class="tag-row"><span>Game AI</span><span>FSM</span><span>NPC Behavior</span></div>
+        </article>
+        <article class="info-panel">
+          <h3>Decision-Based Learning</h3>
+          <p>Designed simulation logic for scenario outcomes where user choices drive consequences and learning paths.</p>
+          <div class="tag-row"><span>Simulation</span><span>Branching Logic</span><span>UX</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="split-section" id="software">
+      <div class="section-heading">
+        <p class="eyebrow">Software Track</p>
+        <h2>Full-stack and engineering projects</h2>
+        <p>Structured software work across web apps, real-time systems, debugging, testing, and cloud deployment.</p>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>Team Project</span>
+          <h3>SurvivalX Decision Simulation Platform</h3>
+          <p>Built with Spring Boot, React, AWS Elastic Beanstalk, AWS Amplify, and Unity WebGL simulations for scenario-based survival training.</p>
+        </article>
+        <article>
+          <span>Real-Time System</span>
+          <h3>Multiplayer Platformer</h3>
+          <p>Photon Fusion multiplayer with synchronization, room management, debugging tools, and Agora-powered voice/video/chat interactions.</p>
+        </article>
+        <article>
+          <span>Freelance</span>
+          <h3>Rapid Application Delivery</h3>
+          <p>Delivered a complete application within 20 days while managing changing requirements through short iteration cycles.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Experience, Education & Recognition</p>
+        <h2>Where I have worked and learned</h2>
+      </div>
+      <div class="org-grid">
+        <article class="org-card">
+          <span class="org-logo"><img src="VyoriusLogo.jpg" alt="Vyorius logo" /></span>
+          <div>
+            <h3>Vyorious</h3>
+            <p>Unity Developer Intern | May 2025 - Present</p>
+            <small>Interactive simulations, modular systems, AI behavior, Unity DevOps, testing, and iteration.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo"><img src="https://www.google.com/s2/favicons?domain=tutedude.com&sz=128" alt="TuteDude logo" onerror="this.replaceWith(document.createTextNode('TD'))" /></span>
+          <div>
+            <h3>TuteDude</h3>
+            <p>Game Developer Intern | Jul 2024 - Aug 2024</p>
+            <small>Photon Fusion multiplayer, UI/UX flows, Agora communication, gameplay debugging, and team collaboration.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo"><img src="https://www.google.com/s2/favicons?domain=academor.com&sz=128" alt="Academor logo" onerror="this.replaceWith(document.createTextNode('AC'))" /></span>
+          <div>
+            <h3>Academor</h3>
+            <p>Game Developer Intern</p>
+            <small>Foundational AR/VR development and interactive feature implementation.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo"><img src="MCSLogo.jpg" alt="MCS logo" /></span>
+          <div>
+            <h3>Freelancer</h3>
+            <p>Game Tester</p>
+            <small>Tested unannounced games and reported back with full documents of the findings.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo">FR</span>
+          <div>
+            <h3>Freelance Developer</h3>
+            <p>Independent application delivery</p>
+            <small>Delivered a complete application within 20 days, using rapid iteration while handling changing requirements.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo"><img src="https://www.google.com/s2/favicons?domain=uecu.ac.in&sz=128" alt="Ujjain Engineering College logo" onerror="this.replaceWith(document.createTextNode('UEC'))" /></span>
+          <div>
+            <h3>Ujjain Engineering College</h3>
+            <p>B.Tech Computer Science | 2022 - 2026</p>
+            <small>Chief Training and Placement Student Coordinator, with leadership and communication experience.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo">IBS</span>
+          <div>
+            <h3>IBS Global Academy, Ujjain</h3>
+            <p>Senior Secondary | 2020 - 2022</p>
+            <small>Academic foundation before Computer Science engineering.</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let us build something interactive.</h2>
+        <p>I am open to game development, Unity, simulation, AI systems, and software engineering roles.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:14adish@gmail.com">14adish@gmail.com</a>
+        <a href="tel:+916261159181">+91 62611 59181</a>
+        <a href="https://github.com/ADISHshar" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/adish-sharma-b15154255/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initialTheme = savedTheme || (prefersLight ? "light" : "dark");
+
+    function applyTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      const isLight = theme === "light";
+      themeToggle.querySelector(".theme-toggle-label").textContent = isLight ? "Dark" : "Light";
+      themeToggle.setAttribute("aria-checked", String(isLight));
+      themeToggle.setAttribute("aria-label", isLight ? "Toggle dark theme" : "Toggle light theme");
+      localStorage.setItem("portfolio-theme", theme);
+    }
+
+    applyTheme(initialTheme);
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.dataset.theme || "dark";
+      applyTheme(currentTheme === "dark" ? "light" : "dark");
+    });
+
+    document.querySelectorAll(".tab-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.dataset.tab;
+
+        document.querySelectorAll(".tab-button").forEach((tab) => {
+          const isActive = tab === button;
+          tab.classList.toggle("active", isActive);
+          tab.setAttribute("aria-selected", String(isActive));
+        });
+
+        document.querySelectorAll(".tab-panel").forEach((panel) => {
+          const isActive = panel.id === targetId;
+          panel.classList.toggle("active", isActive);
+          panel.hidden = !isActive;
+        });
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const action = event.target.closest("a, button");
+      if (!action) return;
+
+      const ripple = document.createElement("span");
+      ripple.className = "click-burst";
+      ripple.style.left = `${event.clientX}px`;
+      ripple.style.top = `${event.clientY}px`;
+      document.body.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 420);
+    });
+
+    function toggleWebGL(button, url) {
+      const card = button.closest(".project-card");
+      const container = card.querySelector(".webgl-container");
+      const iframe = container.querySelector("iframe");
+      const isOpen = container.classList.toggle("open");
+
+      iframe.src = isOpen ? url : "";
+      button.textContent = isOpen ? "Close" : "Play";
+    }
+
+    function setupStickman() {
+      const isDesktop = window.matchMedia("(min-width: 900px) and (pointer: fine)").matches;
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const stickman = document.getElementById("stickman");
+      const targetLayer = document.querySelector(".letter-targets");
+      const status = document.getElementById("stickmanStatus");
+      const playButton = document.getElementById("stickmanPlay");
+      const leaveButton = document.getElementById("stickmanLeave");
+      const fightPanel = document.getElementById("fightPanel");
+      const panelToggle = document.getElementById("fightPanelToggle");
+
+      if (!isDesktop || prefersReducedMotion || !stickman || !targetLayer || !status || !playButton || !leaveButton || !fightPanel || !panelToggle) {
+        return;
+      }
+
+      const keys = new Set();
+      const game = {
+        active: false,
+        ready: false,
+        moving: false,
+        over: false,
+        hitsTaken: 0,
+        startTime: 0,
+        lastEnemyHit: 0,
+        position: { x: 48, y: window.innerHeight - 96 },
+        targets: []
+      };
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function draw() {
+        stickman.style.transform = `translate(${game.position.x}px, ${game.position.y}px)`;
+      }
+
+      function setStatus(message) {
+        const elapsed = game.active ? ((performance.now() - game.startTime) / 1000).toFixed(1) : "0.0";
+        status.textContent = message || `Hits: ${game.hitsTaken}/5 | Timer: ${elapsed}s | Red letters: ${game.targets.length}`;
+      }
+
+      function resetGame(message) {
+        game.active = false;
+        game.ready = false;
+        game.moving = false;
+        game.over = false;
+        game.hitsTaken = 0;
+        game.startTime = 0;
+        game.lastEnemyHit = 0;
+        game.position = { x: 48, y: window.innerHeight - 96 };
+        targetLayer.replaceChildren();
+        game.targets = [];
+        playButton.disabled = false;
+        playButton.textContent = "Play letter fight";
+        leaveButton.hidden = true;
+        draw();
+        setStatus(message);
+      }
+
+      function sourceLetters() {
+        const nodes = document.querySelectorAll("h1, h2, h3, .primary-btn, .secondary-btn, .project-card p, .tab-panel p");
+        const letters = [];
+
+        nodes.forEach((node) => {
+          const rect = node.getBoundingClientRect();
+          if (rect.bottom < 70 || rect.top > window.innerHeight - 30 || rect.width < 40) {
+            return;
+          }
+
+          const chars = node.textContent.replace(/[^a-z]/gi, "").slice(0, 18).split("");
+          chars.forEach((char, index) => {
+            letters.push({
+              char: char.toUpperCase(),
+              x: rect.left + 18 + ((index * 18) % Math.max(24, rect.width - 28)),
+              y: rect.top + 6 + Math.floor((index * 18) / Math.max(24, rect.width - 28)) * 24
+            });
+          });
+        });
+
+        return letters;
+      }
+
+      function spawnTargets() {
+        targetLayer.replaceChildren();
+        game.targets = [];
+        const pool = sourceLetters();
+        const fallback = "GAMEAISWPORTFOLIO".split("").map((char) => ({ char, x: 0, y: 0 }));
+        const chosen = (pool.length ? pool : fallback).sort(() => Math.random() - 0.5).slice(0, 12);
+        const columns = 4;
+        const rows = Math.ceil(chosen.length / columns);
+        const leftEdge = 90;
+        const topEdge = 120;
+        const usableWidth = Math.max(420, window.innerWidth - 220);
+        const usableHeight = Math.max(280, window.innerHeight - 230);
+
+        chosen.forEach((item, index) => {
+          const element = document.createElement("span");
+          element.className = `letter-target ${index % 3 === 0 ? "fighter" : "evader"}`;
+          element.innerHTML = `<span>${item.char}</span>`;
+          targetLayer.appendChild(element);
+
+          const col = index % columns;
+          const row = Math.floor(index / columns);
+          const spreadX = leftEdge + ((col + 0.5) * usableWidth / columns) + ((Math.random() - 0.5) * 46);
+          const spreadY = topEdge + ((row + 0.5) * usableHeight / rows) + ((Math.random() - 0.5) * 38);
+
+          const target = {
+            element,
+            x: clamp(spreadX || item.x, 12, window.innerWidth - 40),
+            y: clamp(spreadY || item.y, 90, window.innerHeight - 42),
+            vx: (Math.random() < 0.5 ? -1 : 1) * (0.9 + Math.random() * 1.1),
+            vy: (Math.random() < 0.5 ? -1 : 1) * (0.8 + Math.random() * 1.0),
+            type: index % 3 === 0 ? "fighter" : "evader"
+          };
+
+          game.targets.push(target);
+          element.style.left = `${target.x}px`;
+          element.style.top = `${target.y}px`;
+        });
+
+        game.ready = true;
+        game.moving = true;
+        playButton.disabled = true;
+        playButton.textContent = "Fight started";
+        leaveButton.hidden = false;
+        setStatus("Letters are moving. Land the first hit to start the timer.");
+      }
+
+      function startGame() {
+        if (game.ready && !game.active) {
+          game.active = true;
+          game.startTime = performance.now();
+        }
+      }
+
+      function limbPoint(key) {
+        const baseX = game.position.x + 18;
+        const baseY = game.position.y + 34;
+        const points = {
+          a: { x: baseX - 20, y: baseY + 2 },
+          s: { x: baseX + 32, y: baseY + 2 },
+          z: { x: baseX - 14, y: baseY + 34 },
+          x: { x: baseX + 28, y: baseY + 34 }
+        };
+        return points[key];
+      }
+
+      function attack(key) {
+        if (game.over || !game.ready) return;
+
+        stickman.classList.remove("attack-a", "attack-s", "attack-z", "attack-x");
+        void stickman.offsetWidth;
+        stickman.classList.add(`attack-${key}`);
+
+        const point = limbPoint(key);
+        game.targets.slice().forEach((target) => {
+          const distance = Math.hypot(target.x + 12 - point.x, target.y + 12 - point.y);
+          if (distance < 42) {
+            startGame();
+            target.element.style.left = `${target.x}px`;
+            target.element.style.top = `${target.y}px`;
+            target.element.classList.add("defeated");
+            game.targets = game.targets.filter((item) => item !== target);
+            setTimeout(() => target.element.remove(), 220);
+          }
+        });
+
+        if (game.targets.length === 0) {
+          game.over = true;
+          const elapsed = ((performance.now() - game.startTime) / 1000).toFixed(1);
+          setStatus(`Congratulations! You defeated every red letter in ${elapsed}s. Resetting...`);
+          setTimeout(() => resetGame("Click Play to spawn a new set of letters."), 2400);
+        }
+      }
+
+      function damagePlayer(now) {
+        if (!game.active || now - game.lastEnemyHit < 900) return;
+
+        const heroX = game.position.x + 18;
+        const heroY = game.position.y + 34;
+        const struck = game.targets.some((target) => {
+          return target.type === "fighter" && Math.hypot(target.x + 12 - heroX, target.y + 12 - heroY) < 28;
+        });
+
+        if (!struck) return;
+
+        game.lastEnemyHit = now;
+        game.hitsTaken += 1;
+        stickman.classList.add("hurt");
+        setTimeout(() => stickman.classList.remove("hurt"), 180);
+
+        if (game.hitsTaken >= 5) {
+          game.over = true;
+          setStatus("You lost. The red letters landed 5 hits. Resetting...");
+          setTimeout(() => resetGame("Click Play to try again."), 1800);
+        }
+      }
+
+      function moveTargets() {
+        const heroX = game.position.x + 18;
+        const heroY = game.position.y + 34;
+
+        game.targets.forEach((target) => {
+          if (game.moving) {
+            const dx = heroX - target.x;
+            const dy = heroY - target.y;
+            const length = Math.max(1, Math.hypot(dx, dy));
+            const direction = target.type === "fighter" ? 1 : -1;
+            const force = game.active ? 0.12 : 0.035;
+
+            target.vx += (dx / length) * direction * force;
+            target.vy += (dy / length) * direction * force;
+            target.vx = clamp(target.vx, -2.4, 2.4);
+            target.vy = clamp(target.vy, -2.4, 2.4);
+            target.x += target.vx;
+            target.y += target.vy;
+
+            if (target.x < 8 || target.x > window.innerWidth - 34) target.vx *= -1;
+            if (target.y < 84 || target.y > window.innerHeight - 34) target.vy *= -1;
+          }
+
+          target.x = clamp(target.x, 8, window.innerWidth - 34);
+          target.y = clamp(target.y, 84, window.innerHeight - 34);
+          target.element.style.left = `${target.x}px`;
+          target.element.style.top = `${target.y}px`;
+        });
+      }
+
+      function tick(now) {
+        if (!game.over) {
+          let vx = 0;
+          let vy = 0;
+          let scrollVelocity = 0;
+
+          if (keys.has("ArrowLeft")) vx -= 4;
+          if (keys.has("ArrowRight")) vx += 4;
+          if (keys.has("ArrowUp")) vy -= 4;
+          if (keys.has("ArrowDown")) vy += 4;
+
+          game.position.x = clamp(game.position.x + vx, 8, window.innerWidth - 48);
+          game.position.y += vy;
+
+          const topZone = 118;
+          const bottomZone = window.innerHeight - 96;
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+          if (keys.has("ArrowUp") && game.position.y <= topZone && window.scrollY > 0) {
+            const pressure = clamp((topZone - game.position.y) / 36, 0.35, 1);
+            scrollVelocity = -14 * pressure;
+            game.position.y = topZone;
+          }
+
+          if (keys.has("ArrowDown") && game.position.y >= bottomZone && window.scrollY < maxScroll) {
+            const pressure = clamp((game.position.y - bottomZone) / 36, 0.35, 1);
+            scrollVelocity = 14 * pressure;
+            game.position.y = bottomZone;
+          }
+
+          game.position.y = clamp(game.position.y, 82, window.innerHeight - 58);
+
+          if (scrollVelocity !== 0) {
+            window.scrollBy(0, scrollVelocity);
+          }
+
+          stickman.classList.toggle("walking", vx !== 0 || vy !== 0);
+          moveTargets();
+          damagePlayer(now);
+          draw();
+          setStatus();
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      window.addEventListener("keydown", (event) => {
+        const key = event.key;
+        const attackKey = key.toLowerCase();
+
+        if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(key)) {
+          keys.add(key);
+          event.preventDefault();
+        }
+
+        if (["a", "s", "z", "x"].includes(attackKey)) {
+          attack(attackKey);
+        }
+      });
+
+      window.addEventListener("keyup", (event) => {
+        keys.delete(event.key);
+      });
+
+      playButton.addEventListener("click", () => {
+        if (!game.ready && !game.active) {
+          spawnTargets();
+        }
+      });
+
+      leaveButton.addEventListener("click", () => {
+        resetGame("You left the fight. Click Play when ready.");
+      });
+
+      panelToggle.addEventListener("click", () => {
+        const collapsed = fightPanel.classList.toggle("collapsed");
+        panelToggle.setAttribute("aria-expanded", String(!collapsed));
+      });
+
+      window.addEventListener("resize", () => resetGame("Click Play to spawn letters."));
+
+      resetGame("Click Play to spawn red letters.");
+      requestAnimationFrame(tick);
+    }
+
+    setupStickman();
+  </script>
+</body>
+</html>

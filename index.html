@@ -17,11 +17,13 @@
       <span>Adish Sharma</span>
     </a>
     <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#about">About</a>
       <a href="#games">Games</a>
       <a href="#profiles">Profiles</a>
       <a href="#ai">AI/ML</a>
       <a href="#software">Software</a>
       <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
       <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light theme">
         <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
@@ -83,6 +85,32 @@
         <span class="leg right"></span>
       </div>
     </div>
+
+    <section class="about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About Me</p>
+        <h2>Self-taught Unity developer with four years of hands-on building.</h2>
+        <p>
+          I have been using Unity for the past 4 years, learning through projects, experiments, internships,
+          freelance work, and a lot of self-driven debugging. I adapt quickly when requirements change, pick up
+          new tools fast, and enjoy turning rough ideas into playable systems.
+        </p>
+      </div>
+      <div class="about-grid">
+        <article>
+          <span>Technical Direction</span>
+          <p>Gameplay systems, WebGL simulations, multiplayer logic, AI behavior, backend-connected Unity flows, and fast prototyping.</p>
+        </article>
+        <article>
+          <span>How I Work</span>
+          <p>Self-taught, practical, and comfortable learning under pressure. I focus on making systems usable, testable, and easy to extend.</p>
+        </article>
+        <article>
+          <span>Beyond Code</span>
+          <p>National jump rope player and state-level badminton tournament participant, which shaped my discipline, reaction speed, and comfort under pressure.</p>
+        </article>
+      </div>
+    </section>
 
     <section class="profile-tabs-section" id="profiles">
       <div class="section-heading">
@@ -170,39 +198,81 @@
         <article class="project-card project-large">
           <div class="project-topline"><span>Open World Prototype</span><span>Unity</span></div>
           <h3>City of Cars</h3>
-          <p>A free-roam city experience with driving, flying, mission flow, snapshot moments, and backup helicopter support.</p>
+          <p>A free-roam city prototype built to test how mission flow, vehicle switching, and large-scene navigation feel inside one Unity world.</p>
+          <dl class="project-notes">
+            <div><dt>Problem</dt><dd>Make a compact open-world demo feel active without relying on linear levels.</dd></div>
+            <div><dt>Built</dt><dd>Driveable city routes, helicopter support, mission triggers, cinematic snapshots, and backup traversal moments.</dd></div>
+            <div><dt>Learned</dt><dd>Large maps need careful spawn placement, camera handoffs, and simple mission clarity to avoid player confusion.</dd></div>
+            <div><dt>Outcome</dt><dd>A portfolio-scale open-world slice that demonstrates vehicles, mission scripting, and scene composition together.</dd></div>
+          </dl>
           <div class="tag-row"><span>Vehicle Physics</span><span>Mission Flow</span><span>Cinematics</span></div>
           <div class="card-actions">
-            <a href="https://drive.google.com/file/d/1dEXahtN636KmhFy1E1GoSN4K5md5PxUM/view" target="_blank" rel="noopener">Open Video</a>
+            <a href="https://drive.google.com/file/d/1ht15_ejpLhqxLXjvZ1gR97wN83LZRUXh/view?usp=drive_link" target="_blank" rel="noopener">Download Build</a>
+            <a href="https://drive.google.com/file/d/1fevpTOTeZCV8NUc7RsTrez_Je1iX6dKS/view?usp=sharing" target="_blank" rel="noopener">Open Video</a>
           </div>
         </article>
 
         <article class="project-card project-large">
           <div class="project-topline"><span>Playable WebGL</span><span>Physics</span></div>
           <h3>Fly With The Wind</h3>
-          <p>A paper-plane flight game focused on lift, drag, wind forces, and smooth player control, with rehab-oriented input potential.</p>
+          <p>A paper-plane flight game focused on readable lift, drag, wind force, and low-friction restart loops for quick in-browser play.</p>
+          <dl class="project-notes">
+            <div><dt>Problem</dt><dd>Turn invisible flight forces into controls a player can understand quickly.</dd></div>
+            <div><dt>Built</dt><dd>Paper-plane movement, wind influence, WebGL export, restart flow, and tuning passes for stable glide behavior.</dd></div>
+            <div><dt>Learned</dt><dd>Physics prototypes need forgiving input curves and visual feedback before they feel fair.</dd></div>
+            <div><dt>Outcome</dt><dd>A directly playable WebGL build that shows physics tuning and player control work without a video handoff.</dd></div>
+          </dl>
           <div class="tag-row"><span>Flight Controls</span><span>Forces</span><span>WebGL</span></div>
           <div class="card-actions">
+            <a href="https://adishsharma.itch.io/fly-with-the-wind" target="_blank" rel="noopener">Play on itch.io</a>
+            <a href="FlyWithTheWind/index.html" target="_blank" rel="noopener">Local WebGL</a>
             <a href="https://drive.google.com/file/d/1i44feGmPHRdEED78r9CgRmwdJI06U5ss/view" target="_blank" rel="noopener">Open Video</a>
           </div>
-          <div class="webgl-container"><iframe title="Fly With The Wind WebGL build"></iframe></div>
         </article>
 
         <article class="project-card project-large">
           <div class="project-topline"><span>Playable WebGL</span><span>3D</span></div>
           <h3>Basketball Shooting 3D</h3>
-          <p>A score-chasing 3D shooting prototype built around precision, camera feel, high-score loops, and repeatable skill testing.</p>
+          <p>A score-chasing 3D shooting prototype built around aiming feel, repeatable throws, readable misses, and quick retry pressure.</p>
+          <dl class="project-notes">
+            <div><dt>Problem</dt><dd>Create a small skill game where the challenge comes from precision instead of content volume.</dd></div>
+            <div><dt>Built</dt><dd>Throw input, hoop collision, scoring feedback, high-score loop, camera framing, and WebGL deployment.</dd></div>
+            <div><dt>Learned</dt><dd>Tiny changes to camera distance, arc strength, and release timing can decide whether a shot feels earned.</dd></div>
+            <div><dt>Outcome</dt><dd>A playable browser build recruiters can try immediately to judge input polish and game-loop clarity.</dd></div>
+          </dl>
           <div class="tag-row"><span>Input Feel</span><span>Scoring</span><span>Unity WebGL</span></div>
           <div class="card-actions">
+            <a href="BasketBallShooting/index.html" target="_blank" rel="noopener">Play</a>
             <a href="https://drive.google.com/file/d/13YkQwROQ-A5_y7zaly4ymFLbcAtdtTGQ/view" target="_blank" rel="noopener">Open Video</a>
           </div>
-          <div class="webgl-container"><iframe title="Basketball Shooting 3D WebGL build"></iframe></div>
+        </article>
+
+        <article class="project-card project-large">
+          <div class="project-topline"><span>Training Simulation</span><span>Unity</span></div>
+          <h3>SurvivalX Emergency Simulation</h3>
+          <p>A Unity decision simulation designed to place users inside urgent real-life incident scenarios where they must act quickly under pressure.</p>
+          <dl class="project-notes">
+            <div><dt>Problem</dt><dd>In panic situations, people often freeze, copy something they once saw, or rely only on instinct.</dd></div>
+            <div><dt>Built</dt><dd>Fast decision scenarios, consequence-driven choices, survival guidance, and simulation flow for emergency training.</dd></div>
+            <div><dt>Learned</dt><dd>Training simulations need speed, clarity, and emotional realism so users can practice responses before a real crisis.</dd></div>
+            <div><dt>Outcome</dt><dd>The simulation aims to preload practical survival information, giving users enough assurance to stay calmer and improve survival chances.</dd></div>
+          </dl>
+          <div class="tag-row"><span>Unity Simulation</span><span>Decision Training</span><span>Emergency UX</span></div>
+          <div class="card-actions">
+            <a href="https://survivex.in" target="_blank" rel="noopener">Open SurviveX</a>
+          </div>
         </article>
 
         <article class="project-card">
           <div class="project-topline"><span>First Person</span><span>Movement</span></div>
           <h3>Parkour FPS</h3>
-          <p>Fast first-person traversal where players dodge hazards and route toward an end cube.</p>
+          <p>Fast first-person traversal built to test readable routes, hazard timing, and momentum control in a compact level.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Make movement feel fast while keeping the route understandable at first glance.</dd></div>
+            <div><dt>Built</dt><dd>Movement, hazards, route goals, failure states, and end-cube objective flow.</dd></div>
+            <div><dt>Learned</dt><dd>FPS parkour depends on generous collision, clear silhouettes, and consistent speed cues.</dd></div>
+            <div><dt>Outcome</dt><dd>A traversal slice that demonstrates level flow, player control, and obstacle timing.</dd></div>
+          </dl>
           <div class="tag-row"><span>FPS</span><span>Level Flow</span><span>Hazards</span></div>
           <div class="card-actions">
             <a href="https://drive.google.com/file/d/1dEXahtN636KmhFy1E1GoSN4K5md5PxUM/view" target="_blank" rel="noopener">Open Video</a>
@@ -212,7 +282,13 @@
         <article class="project-card">
           <div class="project-topline"><span>System Design</span><span>Tools</span></div>
           <h3>Object Placement System</h3>
-          <p>Third-person placement mechanic with snapping, material feedback, and preview validation.</p>
+          <p>Third-person building mechanic designed to make placement decisions obvious before the player commits.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Prevent frustrating invalid placements by showing the rules before confirmation.</dd></div>
+            <div><dt>Built</dt><dd>Snapping, preview materials, validation checks, placement confirmation, and blocked-state feedback.</dd></div>
+            <div><dt>Learned</dt><dd>Placement tools feel better when visual states are immediate and rules are consistent.</dd></div>
+            <div><dt>Outcome</dt><dd>A reusable placement loop suitable for builder, survival, or simulation projects.</dd></div>
+          </dl>
           <div class="tag-row"><span>Snapping</span><span>Validation</span><span>UX</span></div>
           <div class="card-actions">
             <a href="https://drive.google.com/file/d/1aErrFNFwxRMOPRiGJoLVwib9IFngUQcr/view" target="_blank" rel="noopener">Open Video</a>
@@ -222,7 +298,13 @@
         <article class="project-card">
           <div class="project-topline"><span>Vehicle Controller</span><span>Physics</span></div>
           <h3>3D Car Controller</h3>
-          <p>Vehicle controller with UI menus, prop interaction, tuned driving physics, and user-facing gameplay controls.</p>
+          <p>Vehicle controller prototype focused on responsive driving, UI flow, and interaction with simple world props.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Build a car controller that feels controllable enough for gameplay instead of only physics testing.</dd></div>
+            <div><dt>Built</dt><dd>Acceleration, steering, menus, prop interaction, camera follow, and control tuning.</dd></div>
+            <div><dt>Learned</dt><dd>Driving feel comes from iteration across physics values, camera smoothing, and input response.</dd></div>
+            <div><dt>Outcome</dt><dd>A vehicle foundation that can support racing, exploration, or city-driving prototypes.</dd></div>
+          </dl>
           <div class="tag-row"><span>Driving</span><span>UI</span><span>Interaction</span></div>
           <div class="card-actions">
             <a href="https://drive.google.com/file/d/1jsF_ZZd87acmZN4vPqnNnhufplR5JCjQ/view" target="_blank" rel="noopener">Open Video</a>
@@ -232,7 +314,13 @@
         <article class="project-card">
           <div class="project-topline"><span>Combat System</span><span>FPS</span></div>
           <h3>Basic Shooting Mechanism</h3>
-          <p>FPS shooting system with bullet firing, object pooling, hit handling, and cleanup logic.</p>
+          <p>Reusable FPS shooting slice built to separate input, projectile behavior, hit detection, and cleanup responsibilities.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Create a shooting loop that stays stable as more weapons, targets, and effects are added.</dd></div>
+            <div><dt>Built</dt><dd>Fire input, projectile pooling, collision response, hit handling, and despawn logic.</dd></div>
+            <div><dt>Learned</dt><dd>Pooling and cleanup matter early because combat systems create many short-lived objects.</dd></div>
+            <div><dt>Outcome</dt><dd>A cleaner combat foundation for later enemy, weapon, and feedback systems.</dd></div>
+          </dl>
           <div class="tag-row"><span>Shooting</span><span>Pooling</span><span>Cleanup</span></div>
           <div class="card-actions">
             <a href="https://drive.google.com/file/d/1wcBwyJm771eWGHKuoENcauDE3EzfrZzS/view" target="_blank" rel="noopener">Open Video</a>
@@ -242,7 +330,13 @@
         <article class="project-card">
           <div class="project-topline"><span>Gameplay</span><span>Logic</span></div>
           <h3>3D Chess</h3>
-          <p>A playable 3D chess prototype with turn-based logic and camera control.</p>
+          <p>A playable 3D chess prototype focused on translating board rules into clear 3D interaction and turn feedback.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Bring a rule-heavy board game into 3D without making valid moves hard to read.</dd></div>
+            <div><dt>Built</dt><dd>Board interaction, turn handling, piece movement constraints, camera control, and rule-state feedback.</dd></div>
+            <div><dt>Learned</dt><dd>Rule-heavy games benefit from explicit state handling and visible affordances for valid actions.</dd></div>
+            <div><dt>Outcome</dt><dd>A playable logic prototype showing turn management, interaction design, and camera control.</dd></div>
+          </dl>
           <div class="tag-row"><span>Rules</span><span>Camera</span><span>Turns</span></div>
           <div class="card-actions">
             <a href="https://drive.google.com/file/d/1JDstfXL6_vCqaBiaywZktqr8fyaajkBI/view" target="_blank" rel="noopener">Open Video</a>
@@ -261,16 +355,34 @@
         <article class="info-panel">
           <h3>Autonomous Agent Navigation</h3>
           <p>Trained an agent to navigate toward a target using Unity ML-Agents, reward tuning, and iterative training.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Teach an agent to reach goals reliably without hand-scripted movement.</dd></div>
+            <div><dt>Built</dt><dd>Training scene, observation setup, reward rules, target logic, and iteration workflow.</dd></div>
+            <div><dt>Learned</dt><dd>Reward design needs small, testable changes because agents exploit unclear incentives.</dd></div>
+            <div><dt>Outcome</dt><dd>A working ML-Agents navigation demo and better intuition for simulation training loops.</dd></div>
+          </dl>
           <div class="tag-row"><span>Reinforcement Learning</span><span>Python</span><span>Reward Design</span></div>
         </article>
         <article class="info-panel">
           <h3>Enemy AI Systems</h3>
           <p>Built NPC behavior using state machines, decision logic, patrolling, detection, and combat interactions.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Make NPC behavior readable and expandable without tangled conditional logic.</dd></div>
+            <div><dt>Built</dt><dd>Patrol, detection, chase, attack, and transition states for enemy behavior.</dd></div>
+            <div><dt>Learned</dt><dd>State machines make debugging easier when each behavior has a clear owner.</dd></div>
+            <div><dt>Outcome</dt><dd>A reusable enemy AI pattern for stealth, combat, and simulation scenes.</dd></div>
+          </dl>
           <div class="tag-row"><span>Game AI</span><span>FSM</span><span>NPC Behavior</span></div>
         </article>
         <article class="info-panel">
           <h3>Decision-Based Learning</h3>
           <p>Designed simulation logic for scenario outcomes where user choices drive consequences and learning paths.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Help users understand consequences through choices instead of passive explanation.</dd></div>
+            <div><dt>Built</dt><dd>Branching scenario states, outcome mapping, consequence feedback, and user-flow logic.</dd></div>
+            <div><dt>Learned</dt><dd>Decision systems need concise feedback so players connect actions to outcomes.</dd></div>
+            <div><dt>Outcome</dt><dd>A simulation pattern for training experiences where choices drive learning.</dd></div>
+          </dl>
           <div class="tag-row"><span>Simulation</span><span>Branching Logic</span><span>UX</span></div>
         </article>
       </div>
@@ -287,72 +399,137 @@
           <span>Team Project</span>
           <h3>SurvivalX Decision Simulation Platform</h3>
           <p>Built with Spring Boot, React, AWS Elastic Beanstalk, AWS Amplify, and Unity WebGL simulations for scenario-based survival training.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Move survival training from static content into interactive decision practice.</dd></div>
+            <div><dt>Built</dt><dd>React frontend, Spring Boot services, AWS deployment, and Unity WebGL simulation integration.</dd></div>
+            <div><dt>Learned</dt><dd>Web platforms and Unity builds need clean contracts around loading, state, and user progress.</dd></div>
+            <div><dt>Outcome</dt><dd>A team-built training platform that connects web delivery with playable simulations.</dd></div>
+          </dl>
+          <div class="card-actions">
+            <a href="https://survivex.in" target="_blank" rel="noopener">Open SurviveX</a>
+          </div>
         </article>
         <article>
-          <span>Real-Time System</span>
+          <span>Contract Project</span>
           <h3>Multiplayer Platformer</h3>
-          <p>Photon Fusion multiplayer with synchronization, room management, debugging tools, and Agora-powered voice/video/chat interactions.</p>
+          <p>Contract-based multiplayer platformer work involving Unity, web interaction, backend-connected data flow, and account-aware scene loading.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Preserve user data across the website and Unity experience while loading the correct scene only after the user had interacted on the web side.</dd></div>
+            <div><dt>Built</dt><dd>Token-based user data saving, Unity scene loading flow, mirrored web UI inside Unity, and backend communication through JSON files.</dd></div>
+            <div><dt>Learned</dt><dd>Hybrid web and Unity projects need clear handoff points for authentication, saved state, scene entry, and backend payload structure.</dd></div>
+            <div><dt>Outcome</dt><dd>Delivered the integration foundation for a private contract project with synchronized web, backend, and Unity behavior.</dd></div>
+          </dl>
+          <p class="confidential-note">Contract-based project. Further implementation details and gameplay videos are confidential.</p>
         </article>
         <article>
-          <span>Freelance</span>
+          <span>Confidential Contract</span>
           <h3>Rapid Application Delivery</h3>
-          <p>Delivered a complete application within 20 days while managing changing requirements through short iteration cycles.</p>
+          <p>Built the base foundation for a confidential application under a short delivery window, then handed it off for another team to continue.</p>
+          <dl class="project-notes compact">
+            <div><dt>Problem</dt><dd>Create a usable starting structure quickly so the project could move from concept into production work.</dd></div>
+            <div><dt>Built</dt><dd>The application base, overall structure, core systems, main mechanics, and initial implementation patterns.</dd></div>
+            <div><dt>Learned</dt><dd>Early architecture matters most when another team needs to understand and extend the project after handoff.</dd></div>
+            <div><dt>Outcome</dt><dd>Delivered the foundation for a confidential contract project, after which a separate team handled further development.</dd></div>
+          </dl>
+          <p class="confidential-note">Confidential contract work. Public gameplay, demos, and further project details cannot be disclosed.</p>
         </article>
       </div>
     </section>
 
     <section class="section-block" id="experience">
       <div class="section-heading">
-        <p class="eyebrow">Experience, Education & Recognition</p>
-        <h2>Where I have worked and learned</h2>
+        <p class="eyebrow">Work Experience</p>
+        <h2>Where I have built production-facing systems</h2>
+        <p>Roles and contract work where I contributed Unity gameplay, simulations, testing, multiplayer features, and delivery-focused engineering.</p>
       </div>
-      <div class="org-grid">
-        <article class="org-card">
+      <div class="experience-list">
+        <article class="experience-card">
           <span class="org-logo"><img src="VyoriusLogo.jpg" alt="Vyorius logo" /></span>
           <div>
-            <h3>Vyorious</h3>
-            <p>Unity Developer Intern | May 2025 - Present</p>
-            <small>Interactive simulations, modular systems, AI behavior, Unity DevOps, testing, and iteration.</small>
+            <div class="experience-heading">
+              <h3>Vyorius</h3>
+              <p>Unity Developer Intern | May 2025 - Present</p>
+            </div>
+            <p>Building and iterating on Unity simulations with modular gameplay systems, AI behavior, scene workflows, and production-minded debugging.</p>
+            <ul>
+              <li>Worked on interactive simulation features where clarity, responsiveness, and repeatable testing mattered.</li>
+              <li>Used Unity DevOps-style iteration, bug fixing, and structured scene/system cleanup to keep builds moving.</li>
+              <li>Improved comfort with changing requirements, technical handoffs, and practical simulation design.</li>
+            </ul>
           </div>
         </article>
-        <article class="org-card">
+        <article class="experience-card">
           <span class="org-logo"><img src="https://www.google.com/s2/favicons?domain=tutedude.com&sz=128" alt="TuteDude logo" onerror="this.replaceWith(document.createTextNode('TD'))" /></span>
           <div>
-            <h3>TuteDude</h3>
-            <p>Game Developer Intern | Jul 2024 - Aug 2024</p>
-            <small>Photon Fusion multiplayer, UI/UX flows, Agora communication, gameplay debugging, and team collaboration.</small>
+            <div class="experience-heading">
+              <h3>TuteDude</h3>
+              <p>Game Developer Intern | Jul 2024 - Aug 2024</p>
+            </div>
+            <p>Contributed to multiplayer and real-time gameplay workflows, including Photon Fusion, room logic, UI/UX flow, and communication features.</p>
+            <ul>
+              <li>Worked with Photon Fusion synchronization and room-management behavior for multiplayer gameplay.</li>
+              <li>Integrated Agora-powered communication features and supported UI flows around player interaction.</li>
+              <li>Practiced collaborative debugging, build testing, and feature iteration under a team workflow.</li>
+            </ul>
           </div>
         </article>
-        <article class="org-card">
+        <article class="experience-card">
           <span class="org-logo"><img src="https://www.google.com/s2/favicons?domain=academor.com&sz=128" alt="Academor logo" onerror="this.replaceWith(document.createTextNode('AC'))" /></span>
           <div>
-            <h3>Academor</h3>
-            <p>Game Developer Intern</p>
-            <small>Foundational AR/VR development and interactive feature implementation.</small>
+            <div class="experience-heading">
+              <h3>Academor</h3>
+              <p>Game Developer Intern</p>
+            </div>
+            <p>Worked on foundational game-development tasks with exposure to AR/VR concepts and interactive feature implementation.</p>
+            <ul>
+              <li>Built practical Unity confidence through guided development tasks and feature experiments.</li>
+              <li>Explored immersive interaction patterns and learned how small UX decisions affect player understanding.</li>
+            </ul>
           </div>
         </article>
-        <article class="org-card">
+        <article class="experience-card">
           <span class="org-logo"><img src="MCSLogo.jpg" alt="MCS logo" /></span>
           <div>
-            <h3>Freelancer</h3>
-            <p>Game Tester</p>
-            <small>Tested unannounced games and reported back with full documents of the findings.</small>
+            <div class="experience-heading">
+              <h3>Freelancer</h3>
+              <p>Game Tester</p>
+            </div>
+            <p>Tested unannounced games and documented issues, usability problems, reproduction steps, and player-facing feedback.</p>
+            <ul>
+              <li>Created structured reports so developers could reproduce and prioritize findings.</li>
+              <li>Built a stronger eye for polish, edge cases, onboarding friction, and gameplay clarity.</li>
+            </ul>
           </div>
         </article>
-        <article class="org-card">
+        <article class="experience-card">
           <span class="org-logo">FR</span>
           <div>
-            <h3>Freelance Developer</h3>
-            <p>Independent application delivery</p>
-            <small>Delivered a complete application within 20 days, using rapid iteration while handling changing requirements.</small>
+            <div class="experience-heading">
+              <h3>Freelance Developer</h3>
+              <p>Independent application delivery</p>
+            </div>
+            <p>Delivered application foundations under short timelines, including structure, main mechanics, and handoff-ready implementation patterns.</p>
+            <ul>
+              <li>Worked through changing requirements with short iteration cycles and practical scope decisions.</li>
+              <li>Built early architecture that another team could continue after handoff on confidential work.</li>
+            </ul>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="section-block education-section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education & Athletics</p>
+        <h2>Academic base with competitive sports discipline</h2>
+      </div>
+      <div class="education-grid">
         <article class="org-card">
           <span class="org-logo"><img src="https://www.google.com/s2/favicons?domain=uecu.ac.in&sz=128" alt="Ujjain Engineering College logo" onerror="this.replaceWith(document.createTextNode('UEC'))" /></span>
           <div>
             <h3>Ujjain Engineering College</h3>
             <p>B.Tech Computer Science | 2022 - 2026</p>
-            <small>Chief Training and Placement Student Coordinator, with leadership and communication experience.</small>
+            <small>Chief Training and Placement Student Coordinator, with leadership, communication, and coordination experience.</small>
           </div>
         </article>
         <article class="org-card">
@@ -363,6 +540,22 @@
             <small>Academic foundation before Computer Science engineering.</small>
           </div>
         </article>
+        <article class="org-card">
+          <span class="org-logo">JR</span>
+          <div>
+            <h3>National Jump Rope Player</h3>
+            <p>Competitive sports experience</p>
+            <small>Built discipline, stamina, timing, and performance confidence through national-level competition.</small>
+          </div>
+        </article>
+        <article class="org-card">
+          <span class="org-logo">BD</span>
+          <div>
+            <h3>State Badminton Participant</h3>
+            <p>State tournament experience</p>
+            <small>Developed reaction speed, focus, quick decision-making, and composure under pressure.</small>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -371,13 +564,30 @@
         <p class="eyebrow">Contact</p>
         <h2>Let us build something interactive.</h2>
         <p>I am open to game development, Unity, simulation, AI systems, and software engineering roles.</p>
+        <div class="contact-links">
+          <a href="mailto:14adish@gmail.com">14adish@gmail.com</a>
+          <a href="tel:+916261159181">+91 62611 59181</a>
+          <a href="https://github.com/ADISHshar" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/adish-sharma-b15154255/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
-      <div class="contact-links">
-        <a href="mailto:14adish@gmail.com">14adish@gmail.com</a>
-        <a href="tel:+916261159181">+91 62611 59181</a>
-        <a href="https://github.com/ADISHshar" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/adish-sharma-b15154255/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <form class="contact-form" action="https://formsubmit.co/14adish@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Portfolio contact from adishsharma.dev" />
+        <input type="hidden" name="_captcha" value="false" />
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
@@ -432,16 +642,6 @@
       document.body.appendChild(ripple);
       setTimeout(() => ripple.remove(), 420);
     });
-
-    function toggleWebGL(button, url) {
-      const card = button.closest(".project-card");
-      const container = card.querySelector(".webgl-container");
-      const iframe = container.querySelector("iframe");
-      const isOpen = container.classList.toggle("open");
-
-      iframe.src = isOpen ? url : "";
-      button.textContent = isOpen ? "Close" : "Play";
-    }
 
     function setupStickman() {
       const isDesktop = window.matchMedia("(min-width: 900px) and (pointer: fine)").matches;

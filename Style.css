@@ -544,6 +544,11 @@ h3 {
   white-space: nowrap;
 }
 
+.profile-resume-group {
+  display: grid;
+  gap: 10px;
+}
+
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
